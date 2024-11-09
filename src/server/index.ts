@@ -1,9 +1,8 @@
-import { publicProcedure, router } from "./trpc";
+import { router } from "./trpc";
+import { todo } from "./routers/todo";
 
 export const appRouter = router({
-  getTodos: publicProcedure.query(async () => {
-    return [10, 20, 30];
-  }),
+  todo,
 });
 
 export type AppRouter = typeof appRouter;

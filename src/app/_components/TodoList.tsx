@@ -3,7 +3,7 @@
 import { trpc } from "../_trpc/client";
 
 export default function TodoList() {
-  const getTodos = trpc.getTodos.useQuery();
+  const getTodos = trpc.todo.getTodos.useQuery();
 
   return (
     <div>
